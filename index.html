@@ -17,7 +17,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
 
  Onödig JavaScript som gör sidan söligare och tar bort funktionalitet för att kunna backa på sidan.
  Saknar alt text på bilder, kan åtgardas genom att lägga till alt texter.
- HTML tag, deklaration och språk.
+ HTML tag, deklaration och språk. A taggar som inte leder någonstans, kan åtgärdas genom att ta bort dem eller lägga till en länk.
  Duplicerade titlar, åtgärdas genom att ta bort en.
 
  4. Skriv om koden så att den följer tillgänglighetsstandarder.
@@ -26,7 +26,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
 
 Tog bort all JavaScript kod då den inte bidrar med någonting för användaren eller ägaren, bara gör sidan mer långsam.
 Jag har lag till alt texter på alla bilder då det är viktigt för användare som använder skärmläsare eller om bilden inte laddas in.
-Fixat html Tag, deklaration och språk till engelska. Jag har tagit bort en titel då det fanns två.
+Fixat html Tag, deklaration och språk till engelska. Jag har tagit bort en titel då det fanns två. Jag ändrade en anchor tagg till p tagg då det inte ledde någonstans.
 
  6. Testa din nya kod med andra verktyg för tillgänglighet.
 
@@ -167,7 +167,7 @@ Fixat html Tag, deklaration och språk till engelska. Jag har tagit bort en tite
               <img src="https://images.unsplash.com/photo-1576020799627-aeac74d58064?q=80&w=1964&auto=format&fit=crop" alt="Fancy table with old plates, gold forks, tiny pumpkins, and candles.">
               <div class="quote-box">
                 <!-- a-tag, should be p-tag -->
-                <a>"Simplicity is the ultimate sophistication."</a>
+                <p>"Simplicity is the ultimate sophistication."</p>
               </div>
             </div>
             <div class="philosophy-text">
