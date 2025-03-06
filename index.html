@@ -22,6 +22,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
  Bilder laddas in i alldeles för stor storlek, kan åtgärdas genom att ladda in bilder i mindre storlek.
  För många <h1> taggar, kan åtgärdas genom att byta ut en till <h2> eller <h3> beroende på vilken nivå det ska vara.
  Dåliga färgväljningar, kan åtgärdas genom att använda färger som är mer tillgängliga för färgblinda.
+ Dubbla ids på element och ologiska tabindexer, kan åtgärdas genom att ta bort id och ha en standard tabindex.
 
  4. Skriv om koden så att den följer tillgänglighetsstandarder.
 
@@ -33,6 +34,7 @@ Fixat html Tag, deklaration och språk till engelska. Jag har tagit bort en tite
 Jag har ändrat storleken på bilderna så att de laddas in snabbare och inte tar upp onödig bandbredd.
 Tagit bort onödiga <h1> taggar och bytt ut dem till <h2> och <h3> taggar beroende på vilken nivå det ska vara.
 Jag har ändrat färgerna på sidan så att de är mer tillgängliga för färgblinda.
+Jag har tagit bort onödiga ids som dessutom var dubbletter och låtit tabindex vara som standard.
 
  6. Testa din nya kod med andra verktyg för tillgänglighet.
 
@@ -42,12 +44,9 @@ Jag har ändrat färgerna på sidan så att de är mer tillgängliga för färgb
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <!-- What happens when the language attribute is commented out? -->
-  <!-- <html lang="en"> -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Only one `<title>` should be used; multiple titles can cause unexpected behavior and negatively impact SEO and accessibility. -->
     <title>Vase Vista - Artisanal Vases</title>
     <meta
       name="description"
@@ -68,10 +67,10 @@ Jag har ändrat färgerna på sidan så att de är mer tillgängliga för färgb
           <a href="#home" class="logo">Vase Vista</a>
           <!-- Navigation menu with duplicate IDs, inconsistent tabindex, and broken links to a 404 page -->
           <ul class="nav-links">
-            <li><a id="1" href="#home">Home</a></li>
-            <li><a id="1" tabindex="-1" href="#collection">Collection</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
             <li><a href="#philosophy">Philosophy</a></li>
-            <li><a tabindex="-1" href="404.html">Contact</a></li>
+            <li><a href="404.html">Contact</a></li>
           </ul>
         </nav>
       </div>
